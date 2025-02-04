@@ -1,5 +1,4 @@
-#ifndef KMEANS_H
-#define KMEANS_H
+#pragma once
 
 #include <vector>
 
@@ -25,4 +24,3 @@ private:
     bool converged(const vector<vector<double>>& previous_centroids);
 };
 
-#endif
