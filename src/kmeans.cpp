@@ -1,5 +1,5 @@
-#include <kmeans.h>
-#include <utils.h>
+#include <kmeans.hpp>
+#include <utils.hpp>
 #include <cmath>
 #include <iostream>
 #include <limits>
