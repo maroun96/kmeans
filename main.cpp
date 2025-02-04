@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <kmeans.h>
+#include <kmeans.hpp>
 #include <ctime>
 
 using std::vector;
