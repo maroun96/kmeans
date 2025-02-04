@@ -1,20 +1,33 @@
-# CMakeLists.txt
-
 # Specify the minimum CMake version required
 cmake_minimum_required(VERSION 3.10)
 
-#Project name
-project(kmeans)
+# Project name and version
+project(kmeans VERSION 0.0.1 DESCRIPTION "C++ implementation of k-means")
 
-# Set the C++ standard to C++11 (or a later version if you prefer)
+# Set the C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Include the directory where Point.h is located
+# Include the directory where headers are located
 include_directories(include)
 
-# Automatically find all .cpp files in the src directory
-file(GLOB SOURCES "src/*.cpp")
+# List source files explicitly
+set(SOURCES
+    src/point.cpp
+    src/utils.cpp
+    src/kmeans.cpp
+)
 
-# Add the executable target for the main program
-add_executable(main main.cpp ${SOURCES})
+# Create a shared library
+add_library(kmeans SHARED ${SOURCES})
+
+# Specify where to place the compiled library
+set_target_properties(kmeans PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+)
+
+# Enable testing
+enable_testing()
+
+# Add the tests directory
+add_subdirectory(tests)
