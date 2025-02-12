@@ -13,7 +13,6 @@ include_directories(include)
 
 # List source files explicitly
 set(SOURCES
-    src/point.cpp
     src/utils.cpp
     src/kmeans.cpp
 )

@@ -3,7 +3,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # List all test files
 set(TEST_SOURCES
-    test_point.cpp
+    test_kmeans.cpp
 )
 
 # Loop through each test source and create an executable
